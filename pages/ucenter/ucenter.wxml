@@ -1,6 +1,16 @@
 <!--logs.wxml-->
-<view class="container log-list">
-  <block wx:for="{{logs}}" wx:for-item="log">
-    <text class="log-item">{{index + 1}}. {{log}}</text>
-  </block>
+<view class="ucenter-container">
+  <view class="ucenter-info-wrap">
+    <view  class="userinfo-avatar-box">
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      <text class="userinfo-slogon">{{slogon}}</text>
+    </view>
+    <view class="userinfo-detail">
+        <text class="userinfo-item">QQ：{{qq}}</text>
+        <text class="userinfo-item">电话：{{tel}}</text>
+        <text class="userinfo-item">邮箱：{{email}}</text>
+        <text class="userinfo-item">作品：{{github}}</text>
+    </view>
+  </view>
 </view>
