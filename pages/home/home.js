@@ -1,34 +1,8 @@
 // index.js
 // 获取应用实例
 // const app = getApp()
-var order = ['red', 'yellow', 'blue', 'green', 'red']
 Page({
   data: {
-    toView: 'red',
-    scrollTop: 100
-  },
-  upper: function (e) {
-    console.log(e)
-  },
-  lower: function (e) {
-    console.log(e)
-  },
-  scroll: function (e) {
-    console.log(e)
-  },
-  tap: function (e) {
-    for (var i = 0; i < order.length; ++i) {
-      if (order[i] === this.data.toView) {
-        this.setData({
-          toView: order[i + 1]
-        })
-        break
-      }
-    }
-  },
-  tapMove: function (e) {
-    this.setData({
-      scrollTop: this.data.scrollTop + 10
-    })
+    pic: 'https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKabrSY1Qm2ziaatAA1LJlYQq1n2JpsfwO02JujWsVA9qkw08IibDaJlnjPR21bSx4dgVecPsCPQ5vQ/132'
   }
 })

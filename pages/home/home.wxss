@@ -1,19 +1,91 @@
-/**index.wxss**/
-.bc_green{
-  background: green;
+page{
+background: #86c8fd;
 }
-.bc_red {
-  background: red;
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
 }
-.bc_green {
-  background: green;
+.home-tabs-box{
+  background: #2196f3;
+  height: 80rpx;
+  padding: 40rpx 30rpx 10rpx 30rpx;
 }
-.bc_yellow {
-  background: yellow;
+.home-tabs-btns{
+  position: relative;
+  display: inline-flex;
+  margin-right: 30rpx;
+  padding: 16rpx 60rpx;
+  font-size: 14px;
+  line-height: 14px;
+  background-color: #9fb5d4;
+  color: #dadada;
+  border-radius: 8rpx;
 }
-.bc_blue {
-  background: blue;
+.home-tabs-btns.is-active{
+  background: #dadada;
+  color: #584f60;
+  padding: 18rpx 60rpx;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2),0 2px 2px 0 rgba(0, 0, 0, .14),0 1px 5px 0 rgba(0, 0, 0, .12);
 }
-.scroll-view-item{
+.home-tabs-scroll-wrap {
+  white-space: nowrap;
+  display: flex;
+  padding: 5px;
+}
+.home-lists-scroll-wrap{
   height: 100%;
+}
+.home-lists-box{
+  height:calc(100vh - 192rpx);
+  padding: 30rpx;
+  background-color: #86c8fd;
+}
+.home-lists-item{
+  padding: 0 30rpx;
+  margin-left: 30rpx;
+  margin-bottom: 30rpx;
+  background-color: #dbecfa;
+  position: relative;
+  border-radius:8rpx;
+  box-shadow:0 3px 1px -2px rgba(0, 0, 0, .2),
+   0 2px 2px 0 rgba(0, 0, 0, .14),
+   0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+.home-lists-item-left{
+  width: 80rpx;
+  position: absolute;
+  left: -30rpx;
+  top: 16rpx;
+}
+.home-lists-item-right{
+  padding-left: 120rpx;
+}
+.lists-item-title{
+  font-size: 14px;
+  width: 100%;
+  padding: 20rpx 0;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  color: #222;
+}
+.lists-item-time{
+  padding-bottom: 8px;
+}
+.lists-item-image {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius:8rpx;
+  background-color: #eeeeee;
+  box-shadow:0 3px 1px -2px rgba(0, 0, 0, .2),
+  0 2px 2px 0 rgba(0, 0, 0, .14),
+  0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+.item-labels-text{
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  color:#87bcee;
+  margin-right: 20rpx;
 }

@@ -1,25 +1,122 @@
 <!-- index.wxml -->
 <view class="home-container">
-  <view class="section">
-    <view class="section__title">vertical scroll</view>
-    <scroll-view scroll-y style="height: 200px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
-      <view id="green" class="scroll-view-item bc_green"></view>
-      <view id="red" class="scroll-view-item bc_red"></view>
-      <view id="yellow" class="scroll-view-item bc_yellow"></view>
-      <view id="blue" class="scroll-view-item bc_blue"></view>
+  <view class="home-tabs-box">
+    <scroll-view scroll-x="true"  class="home-tabs-scroll-wrap">
+      <view class="home-tabs-btns  is-active">新闻</view>
+      <view class="home-tabs-btns">科技</view>
+      <view class="home-tabs-btns">知识</view>
+      <view class="home-tabs-btns">新闻</view>
+      <view class="home-tabs-btns">科技</view>
+      <view class="home-tabs-btns">知识</view>
     </scroll-view>
-    <view class="btn-area">
-      <button size="mini" bindtap="tap">click me to scroll into view</button>
-      <button size="mini" bindtap="tapMove">click me to scroll</button>
-    </view>
   </view>
-  <view class="section section_gap">
-    <view class="section__title">horizontal scroll</view>
-    <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
-      <view id="green" class="scroll-view-item_H bc_green"></view>
-      <view id="red" class="scroll-view-item_H bc_red"></view>
-      <view id="yellow" class="scroll-view-item_H bc_yellow"></view>
-      <view id="blue" class="scroll-view-item_H bc_blue"></view>
-    </scroll-view>
+  <view  class="home-lists-box">
+    <scroll-view scroll-y="true"  :scroll-x="false" class="home-lists-scroll-wrap">
+    <view class="home-lists-item">
+      <view class="home-lists-item-left">
+        <image class="lists-item-image" mode="aspectFill" src="{{pic}}"></image>
+      </view>
+      <view class="home-lists-item-right">
+        <view class="lists-item-title">网易考拉小程序解决方案  网易考拉小程序解决方案</view>
+        <view class="lists-item-labels">
+          <text class="item-labels-text">145人赞</text>
+          <text class="item-labels-text">2000人阅读</text>
+        </view>
+        <view class="lists-item-time">
+          <text class="item-labels-text">2018-10-28 14:15:26</text>
+        </view>
+      </view>
+    </view>
+    <view class="home-lists-item">
+      <view class="home-lists-item-left">
+        <image class="lists-item-image" mode="aspectFill" src="{{pic}}"></image>
+      </view>
+      <view class="home-lists-item-right">
+        <view class="lists-item-title">网易考拉小程序解决方案  网易考拉小程序解决方案</view>
+        <view class="lists-item-labels">
+          <text class="item-labels-text">145人赞</text>
+          <text class="item-labels-text">2000人阅读</text>
+        </view>
+        <view class="lists-item-time">
+          <text class="item-labels-text">2018-10-28 14:15:26</text>
+        </view>
+      </view>
+    </view>
+    <view class="home-lists-item">
+      <view class="home-lists-item-left">
+        <image class="lists-item-image" mode="aspectFill" src="{{pic}}"></image>
+      </view>
+      <view class="home-lists-item-right">
+        <view class="lists-item-title">网易考拉小程序解决方案  网易考拉小程序解决方案</view>
+        <view class="lists-item-labels">
+          <text class="item-labels-text">145人赞</text>
+          <text class="item-labels-text">2000人阅读</text>
+        </view>
+        <view class="lists-item-time">
+          <text class="item-labels-text">2018-10-28 14:15:26</text>
+        </view>
+      </view>
+    </view>
+    <view class="home-lists-item">
+      <view class="home-lists-item-left">
+        <image class="lists-item-image" mode="aspectFill" src="{{pic}}"></image>
+      </view>
+      <view class="home-lists-item-right">
+        <view class="lists-item-title">网易考拉小程序解决方案  网易考拉小程序解决方案</view>
+        <view class="lists-item-labels">
+          <text class="item-labels-text">145人赞</text>
+          <text class="item-labels-text">2000人阅读</text>
+        </view>
+        <view class="lists-item-time">
+          <text class="item-labels-text">2018-10-28 14:15:26</text>
+        </view>
+      </view>
+    </view>
+    <view class="home-lists-item">
+      <view class="home-lists-item-left">
+        <image class="lists-item-image" mode="aspectFill" src="{{pic}}"></image>
+      </view>
+      <view class="home-lists-item-right">
+        <view class="lists-item-title">网易考拉小程序解决方案  网易考拉小程序解决方案</view>
+        <view class="lists-item-labels">
+          <text class="item-labels-text">145人赞</text>
+          <text class="item-labels-text">2000人阅读</text>
+        </view>
+        <view class="lists-item-time">
+          <text class="item-labels-text">2018-10-28 14:15:26</text>
+        </view>
+      </view>
+    </view>
+    <view class="home-lists-item">
+      <view class="home-lists-item-left">
+        <image class="lists-item-image" mode="aspectFill" src="{{pic}}"></image>
+      </view>
+      <view class="home-lists-item-right">
+        <view class="lists-item-title">网易考拉小程序解决方案  网易考拉小程序解决方案</view>
+        <view class="lists-item-labels">
+          <text class="item-labels-text">145人赞</text>
+          <text class="item-labels-text">2000人阅读</text>
+        </view>
+        <view class="lists-item-time">
+          <text class="item-labels-text">2018-10-28 14:15:26</text>
+        </view>
+      </view>
+    </view>
+    <view class="home-lists-item">
+      <view class="home-lists-item-left">
+        <image class="lists-item-image" mode="aspectFill" src="{{pic}}"></image>
+      </view>
+      <view class="home-lists-item-right">
+        <view class="lists-item-title">网易考拉小程序解决方案  网易考拉小程序解决方案</view>
+        <view class="lists-item-labels">
+          <text class="item-labels-text">145人赞</text>
+          <text class="item-labels-text">2000人阅读</text>
+        </view>
+        <view class="lists-item-time">
+          <text class="item-labels-text">2018-10-28 14:15:26</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
   </view>
 </view>
