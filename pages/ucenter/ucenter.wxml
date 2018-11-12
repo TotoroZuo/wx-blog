@@ -2,8 +2,8 @@
 <view class="ucenter-container">
   <view class="ucenter-info-wrap">
     <view  class="userinfo-avatar-box">
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avator}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.username}}</text>
       <text class="userinfo-slogon">{{slogon}}</text>
     </view>
     <view class="userinfo-detail">

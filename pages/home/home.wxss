@@ -60,6 +60,7 @@ background: #86c8fd;
 }
 .home-lists-item-right{
   padding-left: 120rpx;
+  height: 192rpx;
 }
 .lists-item-title{
   font-size: 14px;

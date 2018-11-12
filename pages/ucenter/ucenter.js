@@ -17,8 +17,10 @@ Page({
   onLoad: function () {
     this.getUserInfo()
   },
-  getUserInfo: function () {
-    console.log(e)
+  getUserInfo () {
     this.userInfo = app.globalData.userInfo
+    this.setData({
+      userInfo: app.globalData.userInfo
+    })
   }
 })

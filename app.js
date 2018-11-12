@@ -8,7 +8,14 @@ App({
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
-    this.autoLogin()
+    // if (!this.globalData.userInfo) {
+    //   this.login()
+    // }
+  },
+  onShow () {
+    if (!this.globalData.userInfo) {
+      this.login()
+    }
   },
   autoLogin () {
     util.promisify(wx.checkSession)().then(() => {
@@ -53,13 +60,11 @@ App({
       return wxRequest.get('/user/getToken', {
         data: {
           code
-        } })
-    }).then(res => {
-      wx.setStorage({
-        key: 'token',
-        data: res.data.token
+        }
       })
-      this.autoLogin()
+    }).then(res => {
+      wx.setStorageSync('token', res.data.token)
+      this.getUserInfo()
     }).catch(err => {
       if (err) {
         console.log('获取code失败')

@@ -8,7 +8,7 @@
         <button wx:if="{{canIUse}}" class="login-dialog__btn" lang="zh_CN" open-type="getUserInfo" bindgetuserinfo="setUserInfo">
           重新登录
         </button>
-        <button  class="login-dialog__btn"    bindtap="autoLogin"  wx:else>
+        <button  class="login-dialog__btn"    bindtap="getUserInfo"  wx:else>
           重新登录
         </button>
       </view>
