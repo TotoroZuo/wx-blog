@@ -14,7 +14,11 @@ Page({
     github: 'github.com/TotoroZuo',
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
-  onLoad: function () {
+  onShow: function () {
+    if (!app.globalData.userInfo) {
+      app.login()
+      return false
+    }
     this.getUserInfo()
   },
   getUserInfo () {

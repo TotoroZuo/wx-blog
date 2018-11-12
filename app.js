@@ -13,9 +13,11 @@ App({
     // }
   },
   onShow () {
-    if (!this.globalData.userInfo) {
-      this.login()
-    }
+    // if (!this.globalData.userInfo) {
+    //   this.login()
+    // } else {
+    //   console.log(this.globalData.userInfo)
+    // }
   },
   autoLogin () {
     util.promisify(wx.checkSession)().then(() => {
@@ -28,6 +30,7 @@ App({
   },
   getUserInfo () {
     util.promisify(wx.getUserInfo)().then(res => {
+      console.log(res)
       this.storeUserInfo(res.data)
     }).catch(err => {
       if (err) {
