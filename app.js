@@ -31,7 +31,7 @@ App({
   getUserInfo () {
     util.promisify(wx.getUserInfo)().then(res => {
       console.log(res)
-      this.storeUserInfo(res.data)
+      this.storeUserInfo(res)
     }).catch(err => {
       if (err) {
         wx.redirectTo({
@@ -45,6 +45,7 @@ App({
       return false
     }
     const info = params.userInfo
+    console.log(info)
     wxRequest.post('/user/storeUser', { data: {
       username: info.nickName,
       avator: info.avatarUrl

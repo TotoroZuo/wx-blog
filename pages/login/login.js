@@ -18,7 +18,7 @@ Page({
   getUserInfo () {
     // 在没有 open-type=getUserInfo 版本的兼容处理
     util.promisify(wx.getUserInfo)().then(res => {
-      this.storeUserInfo(res.data)
+      this.storeUserInfo(res)
     }).catch(err => {
       if (err) {
         console.log('获取用户信息失败')
