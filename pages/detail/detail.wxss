@@ -44,4 +44,7 @@
 .detail-article-liked {
   color: #2196f3;
 }
+.detail-article-footer{
+  padding-bottom: 15px;
+}
 @import "../../utils/wxParse/wxParse.wxss";
