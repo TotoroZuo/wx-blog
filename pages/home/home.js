@@ -10,5 +10,11 @@ Page({
       app.login()
       return false
     }
+  },
+  showDetail (event) {
+    console.log(event)
+    wx.redirectTo({
+      url: '/pages/detail/detail?id=' + event.currentTarget.dataset.id
+    })
   }
 })

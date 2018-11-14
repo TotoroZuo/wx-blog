@@ -2,7 +2,8 @@
   "pages": [
     "pages/home/home",
     "pages/ucenter/ucenter",
-    "pages/login/login"
+    "pages/login/login",
+    "pages/detail/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,0 +1,26 @@
+<!--logs.wxml-->
+ <view>
+    <scroll-view scroll-y="true"  :scroll-x="false" class="detail-container-scroll"  wx:if="{{article}}">
+      <view class="detail-article-title">{{article.title}}</view>
+      <view>
+        <text class="detail-article-cate  article-label  float-l">{{article.cate}}</text>
+        <text class="detail-article-author  article-label float-l">{{article.author}}</text>
+        <text class="detail-article-time article-label  float-r">{{article.time}}</text>
+        <view class="detail-clear"></view>
+      </view>
+      <view class="detail-article-content">
+        <import src="../../utils/wxParse/wxParse.wxml" />
+        <template is="wxParse" data="{{wxParseData:contents.nodes}}" />
+      </view>
+      <view class="detail-article-footer">
+        <text class="detail-article-read  article-label  float-l">阅读：{{article.read}}</text>
+        <text class="detail-article-liked article-label  float-r">{{article.praise}}</text>
+        <image class="detail-article-likeicon  float-r" src="{{likeicon}}" mode="cover"  ></image>
+        
+        <view class="detail-clear"></view>
+      </view>
+    </scroll-view>
+    <view class="detail-container"   wx:else>
+      <image class="detail-no-data" src="{{nodata}}" mode="cover"   ></image>
+    </view>
+</view>
