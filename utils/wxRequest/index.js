@@ -1,5 +1,5 @@
 import wxRequest from './main.js'
-wxRequest.defaults.baseURL = 'https://pang.zuolongfei.me'
+wxRequest.defaults.baseURL = 'https://pang.zuolongfei.me/wx'
 // 针对post请求增加token
 wxRequest.interceptors.request.use(
   config => {
